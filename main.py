@@ -32,6 +32,7 @@ if ask_catergory == "y":
         vu.upload(file, name)
 
 if ask_catergory == "N":
+    repeats_num = int(repeats)
     category = "a sad cat story with a strong plot for example- getting stranded off boat and needing to set up shelter and fie and food anther example- cat parents need to commit crimes to feed kittens- another inspiration- cat is bullied at school so he plots revenge as his feeings are hurt- another- cat has terminal illness and dies- another- end of cat planet world id coming " #if the user does not input the LLM will pick a random topic
     for i in range(repeats):
         file = f"./final{i}.mp4"
