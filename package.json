@@ -1,0 +1,14 @@
+{
+  "name": "sad-cat-ai",
+  "version": "1.0.0",
+  "description": "Create a cat AI video by a catergory selection and a simple run in the terminal.\r ## Video example 🎥\r [![sad-cat-ai-story-example](https://img.youtube.com/vi/WmVRgN40P8o/0.jpg)](https://www.youtube.com/watch?v=WmVRgN40P8o)\r ## Installation 💾\r 1. clone this repo `git clone https://github.com/Ewan-Dev/sad-cat-ai.git`\r 2. install requirements `pip install -r requirements.txt`\r ## Run 🎬\r 1. run `python3 main.py` in this repo\r 2. the terminal will now prompt *catergory for the sad cat story (examples: beach trip, school, under the sea):* and then provide your topic\r 3. your final video will saved as **final.mp4** \r *(it will be deleted and replaced next time you run the code do be sure to copy it)*",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.8.4"
+  }
+}

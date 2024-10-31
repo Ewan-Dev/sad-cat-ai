@@ -1,12 +1,16 @@
 from PIL import Image
 import random
 import math
+import os
 from moviepy.editor import *
 def edit(secs, audio, image_num):
     image_clip = []
-    for i in range(image_num):
-        print(i)
-        image_clip.append(ImageClip(f"./images/image{i}.png").set_duration(secs))
+    for i in range(image_num - 1):
+        path= f"./images/image{i}.png"
+        image_exists = os.path.exists(path)
+        if image_exists:
+            print(f"{path} exists")
+            image_clip.append(ImageClip(path).set_duration(secs))
     image_slideshow = concatenate(image_clip, method="compose")
     slideshow_duration = math.floor(image_slideshow.duration)
     audio_clip = AudioFileClip(audio)

@@ -25,15 +25,18 @@ def clear_prev_files(x):
     return 1
 
 def get_prompt_story(prompt):
-    url = f"{base_url_story}/{prompt}make-sure-the-cat-is-in-every-scene-"
-    response = requests.get(url)
+    url_v1 = f"{base_url_story}/{prompt}make-sure-the-plot-is-strong-and-emotional"
+    url_v2 = f"{url_v1}-from-that-text-make-sure-every-scene-is-a-description-for-an-ai-image-gen-prompt-being-descrivetive-of-realtive-size-and-position-as-well-as-appearence"
+    url_final = f"{url_v2}-eradiacate-any-use-of-pronuns-replacing-them-with-the-descrptions-instead"
+    response = requests.get(url_final)
     if response.status_code == 200:
         return response.text
     else:
         print(f"Failed to get story prompt {response.status_code}")
 
 def get_prompt_images(prompt, index):
-    url = f"{base_url_image}/{prompt}-the-cat-is-ginger-the-extremely-exaggerated-emotion--real-8k-realistic-3d?width=1080&height=1920" #random number to avoid same api call leading to same images from pollinations""
+    url = f"{base_url_image}/{prompt}-the-cat-is-ginger-realistic-3d-style-the-extremely-exaggerated-emotion-real-8k-realistic-3d?width=1080&height=1920"
+    
     response = requests.get(url)
     if response.status_code == 200:
         image = ''
@@ -43,15 +46,17 @@ def get_prompt_images(prompt, index):
     else:
         print(f"Failed to get image {index}")
 
-
-def request_images(number, subject):
+def request_story(number, subject):
     request_number = random.randint(1,1000000)
-    prompt = f"Write-a-very-sad-and-emotional-catstory-with-only-{number}-sentences-and-its-about-{subject}of-a-ginger-cat-who-appears-in-every-scene-capable-of-human-like-actions-Each-sentence-should-feel-like-an-image-description-like-of-a-comic-book-avoiding-close-ups-and-pronouns-to-refer-to-the-cats-but-instead-use-their-appearance-to-refer-to-them-and-keeping-the-setting-in-view-only-{number}-sentences-request-{request_number}" #random number to avoid same api call leading to same images from pollinations
-    prompt_story = get_prompt_story(f"ginger-cat{prompt}")
-    if prompt_story:
+    prompt = f"Write-a-very-sad-heart-wrenching-cryable-and-emotional-catstory-with-only-{number}-sentences-and-its-about-{subject}of-a-ginger-cat-is-capable-of-human-like-actions-keeping-the-setting-in-view-only-{number}-sentences-and-all-cats-have-clothes-that-are-a-part-of-their-charcter-so-make-sure-you-tell-us-the-cats-clothing-in-the-descriptions-++request-{request_number}" #random number to avoid same api call leading to same images from pollinations
+    prompt_story = get_prompt_story(prompt)
+    return prompt_story
+
+def request_images(story):
+    if story:
         story_images = []
-        prompt_story = prompt_story.split(".")
-        for i , x in (enumerate(prompt_story)):
-            get_prompt_images(prompt_story[i], i)
+        story = story.split(".")
+        for i , x in (enumerate(story)):
+            get_prompt_images(story[i], i)
 
 
