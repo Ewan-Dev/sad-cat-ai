@@ -18,7 +18,8 @@ repeats = input("video amount:")
 ask_catergory = input("prompt for catergory after each initisation? y/N")
 
 if ask_catergory == "y":
-    for i in range(repeats):
+    repeats_num = int(repeats)
+    for i in range(repeats_num):
         file = f"./final{i}.mp4"
         category = input("catergory for the sad cat story (examples: beach trip, school, under the sea):\n")
         ig.clear_prev_files(images)
