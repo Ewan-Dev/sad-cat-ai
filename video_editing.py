@@ -3,7 +3,7 @@ import random
 import math
 import os
 from moviepy.editor import *
-def edit(secs, audio, image_num):
+def edit(secs, audio, image_num, video_path):
     image_clip = []
     for i in range(image_num - 1):
         path= f"./images/image{i}.png"
@@ -23,5 +23,5 @@ def edit(secs, audio, image_num):
     text2 = TextClip("if you love animals", fontsize=75, stroke_width=6, stroke_color="#38659c", color="#b3daff", font="./fonts/CherryBombOne-Regular.ttf").set_position((65, 170)).set_duration(slideshow_duration).set_opacity(0.5)
     image_slideshow = CompositeVideoClip([image_slideshow, text1, text2, watermarkemoji1, watermark])
 
-    image_slideshow.write_videofile("final.mp4", fps=24)
+    image_slideshow.write_videofile(video_path, fps=24)
     
