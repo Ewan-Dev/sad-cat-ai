@@ -9,10 +9,8 @@ Create a cat AI video by a catergory selection and a simple run in the terminal.
 4. assign your YT STUDIO channel URL to the `channel_url` variable
 ## Run 🎬
 1. run `python3 main.py` in this directory
-2. terminal will prompt `video amount:` which will determine how times to iterate a loop to upload the videos to make and upload to YT 
-3. you will now be asked `prompt for catergory after each initisation? y/N"` and you should enter your choice. 
-    - if you types `y` you will be prompted `catergory for the sad cat story (examples: beach trip, school, under the sea):` for every loop iteration and you should enter your topic
-    - if you entered `N` then the loop will iterate however many times you told it to.
-4. (optional) in `main.py` you can change the values of `image_duration` and `images` to your liking but the deafults are `image_duration = 1.5 #seconds` and `images = 15`
-4. your final video will saved as **final[video index].mp4** and uploaded to YT
-*(it will be deleted and replaced locally next time you run the code do be sure to copy it)*
+2. the localhost address is printed in the terminal and open it for the frontend
+3. (optional) in `main.py` you can change the values of `image_duration` and `images` to your liking but the deafults are `image_duration = 1.5 #seconds` and `images = 15`
+4. enter values in the corresponding inputs and click submit
+5. your final video will saved as **final[video index].mp4** in the `videos` folder and uploaded to YT
+*(the videos and images will be deleted and replaced locally next time you run the code do be sure to copy it)*
