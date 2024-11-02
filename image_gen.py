@@ -10,18 +10,18 @@ base_url_image = "https://image.pollinations.ai/prompt"
 
 def clear_prev_files(x):
     image_path = "./images"
-
+    videos_path = "./videos"
     if os.path.exists(image_path):
         shutil.rmtree(f"{image_path}")
         print(f"removed:{image_path}")
     else:
             print(f"{image_path} does not exist so it couldn't be removed")
-    if os.path.exists("final.mp4"):
-            os.remove("final.mp4")
-            print(f"removed:final.mp4")
+    if os.path.exists(videos_path):
+            os.remove(videos_path)
+            print(f"removed:{videos_path}")
     else:
-            print(f"final.mp4 does not exist so it couldn't be removed")
-    os.mkdir("images")
+            print(f"{videos_path} does not exist so it couldn't be removed")
+    os.mkdir("videos")
     return 1
 
 def get_prompt_story(prompt):
@@ -42,7 +42,6 @@ def get_prompt_images(prompt, index):
         image = ''
         image = Image.open(BytesIO(response.content))
         image.save(f"./images/image{index}.png")
-        image.show()
     else:
         print(f"Failed to get image {index}")
 

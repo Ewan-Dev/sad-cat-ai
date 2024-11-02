@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    color:white;
+    background-color: rgb(22, 22, 22);
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    width:auto;
+    margin: 1.5em;
+}
+
+#main-header,
+#main-header-text
+{
+    display: inline;
+    position: relative;
+}
+
+#main-header-text
+{
+    font-size: 5em;
+    background: linear-gradient(315deg, #EE524F, #EE764F, #EEC24F, #92EE4F, #4FBFEE, #4F86EE, #884FEE, #E64FEE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1em;
+}
+#image-cat-2
+{
+    width: 4.8em;
+}
+#image-cat-1
+{
+    width: 4.5em;
+    transform: translate(0, 0.5em);
+}
+div
+{
+    width: auto;
+    height: auto;
+    margin: 2em;
+}
+#submit-btn
+{
+    background: transparent;
+    width: 13em;
+    height: 3em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+input, select
+{
+    margin: 0.5em 1em;
+    background-color: #222222;
+    color:white;
+    border: solid white 0.1em;
+    border-radius: 0.4em;
+    padding:0.2em;
+    font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none ;
+}
+

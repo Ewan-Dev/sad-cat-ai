@@ -1,0 +1,28 @@
+{% extends "base.html"%}
+{% block title %}Cat AI Generation{% endblock %}
+<div id="main-header">
+    {% block header %}
+    <img src="{{url_for('static', filename='images/cat-emoji-1.png')}}" id="image-cat-1">
+    <h1 id="main-header-text">Cat AI Video Generation</h1>
+    <img src="{{url_for('static', filename='images/cat-emoji-2.png')}}" id="image-cat-2">
+    {% endblock %}
+</div>
+
+{% block content %}
+<div id="form-container">
+<form action="#" method="post">
+    <label for="vid-amount">how many videos:<input id="vid-amount" type="number" name="vid-amount" required></label>
+    <br>
+    <label for="catergory">category (optional):<input id="catergory" type="text" name="catergory"></label>
+    <br>
+    <label for="vid-type"> video type:
+    <select id="vid-type" name="vid-type">
+        <option value="story" name="story" selected>story</option>
+        <option value="dance" name="dance">dance</option>
+    </select>
+</label>
+<br>
+<input type="submit" value="submit" id="submit-btn">
+</form>
+</div>
+{% endblock %}
