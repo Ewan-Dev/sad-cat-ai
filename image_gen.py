@@ -17,11 +17,12 @@ def clear_prev_files(x):
     else:
             print(f"{image_path} does not exist so it couldn't be removed")
     if os.path.exists(videos_path):
-            os.remove(videos_path)
+            shutil.rmtree(f"{videos_path}")
             print(f"removed:{videos_path}")
     else:
             print(f"{videos_path} does not exist so it couldn't be removed")
     os.mkdir("videos")
+    os.mkdir("images")
     return 1
 
 def get_prompt_story(prompt):
@@ -33,6 +34,7 @@ def get_prompt_story(prompt):
         return response.text
     else:
         print(f"Failed to get story prompt {response.status_code}")
+        return 0
 
 def get_prompt_images(prompt, index):
     url = f"{base_url_image}/{prompt}-the-cat-is-ginger-realistic-3d-style-the-extremely-exaggerated-emotion-real-8k-realistic-3d?width=1080&height=1920"
@@ -42,8 +44,10 @@ def get_prompt_images(prompt, index):
         image = ''
         image = Image.open(BytesIO(response.content))
         image.save(f"./images/image{index}.png")
+        return 1
     else:
         print(f"Failed to get image {index}")
+        return 0
 
 def request_story(number, subject):
     request_number = random.randint(1,1000000)
@@ -57,5 +61,5 @@ def request_images(story):
         story = story.split(".")
         for i , x in (enumerate(story)):
             get_prompt_images(story[i], i)
-
+    return 1
 
