@@ -2,6 +2,7 @@
 Create a cat AI video by a catergory selection and a simple run in the terminal.
 ## Video example 🎥
 [![sad-cat-ai-story-example](https://img.youtube.com/vi/WmVRgN40P8o/0.jpg)](https://www.youtube.com/watch?v=WmVRgN40P8o)
+![front end image](./front-end-image.png)
 ## Setting Up 💾
 1. clone this repo `git clone https://github.com/Ewan-Dev/sad-cat-ai.git`
 2. install requirements `pip install -r requirements.txt`
