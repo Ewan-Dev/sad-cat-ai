@@ -46,6 +46,15 @@ div
     font-family: "Poppins", sans-serif;
     font-weight: 700;
 }
+#submit-btn:active
+{
+    background: white;
+    color:rgb(22, 22, 22);
+    width: 13em;
+    height: 3em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
 
 input, select
 {

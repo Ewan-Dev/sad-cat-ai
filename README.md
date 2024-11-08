@@ -5,6 +5,7 @@ Create a cat AI video by a catergory selection and a simple run in the terminal.
 ![front end image](./front-end-image.png)
 ## Setting Up 💾
 1. clone this repo `git clone https://github.com/Ewan-Dev/sad-cat-ai.git`
+2. use `cd sad-cat-ai` to enter directory
 2. install requirements `pip install -r requirements.txt`
 3. in `main.py` assign yout YT channel login details `username = ''` and ` password = ''` if you want to automate the uploads
 4. assign your YT STUDIO channel URL to the `channel_url` variable
