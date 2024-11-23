@@ -13,5 +13,5 @@ def get_title(story):
         return title
     else:
         # returns default title
-        print("fial")
+        print("failed to generate title")
         return "sadcat story #aicat #trending #cat #cute #sadcat #sadstory #aicat #catlover #kitten"    
