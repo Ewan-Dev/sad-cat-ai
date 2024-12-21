@@ -11,7 +11,6 @@ password = ''
 
 #CHANNEL URL EXAMPLE: https://studio.youtube.com/channel/UCGuFWvnSolLc706mc17JkDQ
 channel_url = ''
-
 image_duration = 1.5 #seconds
 images = 15
 
@@ -45,6 +44,6 @@ def main(repeats, category, video_type):
             vu.upload(file, name, username, password, channel_url)
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
 
 
