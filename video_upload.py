@@ -1,7 +1,7 @@
 from playwright.sync_api import sync_playwright
 def upload(file_path, name, username, password, channel_url):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True, slow_mo=5, args=["--disable-blink-features=AutomationControlled"])
+        browser = p.chromium.launch(headless=False, slow_mo=5, args=["--disable-blink-features=AutomationControlled"])
         page = browser.new_page()
         page.goto(channel_url)
         page.fill("input#identifierId", username)

@@ -45,6 +45,6 @@ def main(repeats, category, video_type):
             vu.upload(file, name, username, password, channel_url)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
 
 

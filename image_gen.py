@@ -37,7 +37,7 @@ def get_prompt_story(prompt):
         return 0
 
 def get_prompt_images(prompt, index):
-    url = f"{base_url_image}/{prompt}-the-cat-is-ginger-realistic-3d-style-the-extremely-exaggerated-emotion-real-8k-realistic-3d?width=1080&height=1920"
+    url = f"{base_url_image}/{prompt}-the-cat-is-ginger-realistic-3d-style-the-extremely-exaggerated-emotion-real-8k-realistic-3d?width=1080&height=1920&seed={seed_number}"
     
     response = requests.get(url)
     if response.status_code == 200:
@@ -50,8 +50,8 @@ def get_prompt_images(prompt, index):
         return 0
 
 def request_story(number, subject):
-    request_number = random.randint(1,1000000)
-    prompt = f"Write-a-very-sad-heart-wrenching-cryable-and-emotional-catstory-with-only-{number}-sentences-and-its-about-{subject}of-a-ginger-cat-is-capable-of-human-like-actions-keeping-the-setting-in-view-only-{number}-sentences-and-all-cats-have-clothes-that-are-a-part-of-their-charcter-so-make-sure-you-tell-us-the-cats-clothing-in-the-descriptions-++request-{request_number}" #random number to avoid same api call leading to same images from pollinations
+    seed_number = random.randint(1,1000000)
+    prompt = f"Write-a-very-sad-heart-wrenching-cryable-and-emotional-catstory-with-only-{number}-sentences-and-its-about-{subject}of-a-ginger-cat-is-capable-of-human-like-actions-keeping-the-setting-in-view-only-{number}-sentences-and-all-cats-have-clothes-that-are-a-part-of-their-charcter-so-make-sure-you-tell-us-the-cats-clothing-in-the-descriptions?&seed={seed_number}" #random number to avoid same api call leading to same images from pollinations
     prompt_story = get_prompt_story(prompt)
     return prompt_story
 
