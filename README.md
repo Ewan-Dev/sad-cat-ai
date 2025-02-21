@@ -1,5 +1,6 @@
 # Sad Cat AI Video Generation 🐈
-Create a cat AI video by a catergory selection and a simple run in the terminal.
+Create a cat AI video by a catergory selection and a simple run in the terminal
+**🏗️ needs some updating and debugging**
 ## Video example 🎥
 [![sad-cat-ai-story-example](https://img.youtube.com/vi/WmVRgN40P8o/0.jpg)](https://www.youtube.com/watch?v=WmVRgN40P8o)
 ![front end image](./front-end-image.png)
